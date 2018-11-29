@@ -52,10 +52,8 @@ class S3Notifier {
 
   poll() {
     this.s3.headObject(this.params).promise()
-      .then(data => {
-        this.compareLastModifieds(data.LastModified);
-        this.schedulePoll();
-      });
+      .then(data => this.compareLastModifieds(data.LastModified))
+      .finally(() => this.schedulePoll());
   }
 
   compareLastModifieds(newLastModified) {

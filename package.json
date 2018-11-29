@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/tomdale/fastboot-s3-notifier#readme",
   "dependencies": {
-    "aws-sdk": "^2.3.4"
+    "aws-sdk": "^2.3.4",
+    "promise.prototype.finally": "^3.1.0"
   }
 }

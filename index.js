@@ -1,6 +1,10 @@
 "use strict";
 
 const AWS  = require('aws-sdk');
+const promiseFinally = require('promise.prototype.finally');
+
+// Add `finally()` to `Promise.prototype`
+promiseFinally.shim();
 
 const DEFAULT_POLL_TIME = 3 * 1000;
 
